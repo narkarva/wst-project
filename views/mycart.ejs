@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body
+        {
+            background-image: url('/img/bgimage.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            background-position: center center;;
+        }
+        input[type=password], input[type=number]
+        {
+            width: 40%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        label 
+        {
+            font-size: 20px;
+            padding: 12px 12px 12px 0;
+            color: blue;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .transbox 
+        {
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: #ffffff;
+            text-align: center;
+            border: 1px solid black;
+            opacity: 0.85;
+        }
+        .transbox2 
+        {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            text-align: center;
+            border: 1px solid black;
+            opacity: 0.85;
+        }
+        h1
+        {
+            font-family: cursive;
+            color: brown;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="transbox2">
+        <h1>View your Cart</h1>
+    </div>
+    <div class="transbox">
+    <p><b>Item name : <%= cont[0].item_name %></b></p>
+    <p><b>Item price : <%= cont[0].price %></b></p>
+    <form action="/dopayment" method="POST"><br>
+        <label for="mode">Choose mode of payment</label><br>
+        <select name="mode" id="mode">
+            <option value="card">card</option>
+            <option value="UPI">UPI</option>
+        </select><br><br>
+        <label for="cardnum">Enter card number for card payment mode</label><br>
+        <input type="number" name="cardnum" id="cardnum" placeholder="Enter card number"><br><br>
+        <label for="cvv">Enter cvv number</label><br>
+        <input type="password" name="cvv" id="cvv" placeholder="Enter cvv number"><br><br>
+        <label for="num">Enter UPI mobile number for UPI payment mode</label><br>
+        <input type="number" name="num" id="num" placeholder="Enter mobile number"><br><br>
+        <input type="submit" class="btn btn-primary" name="submit" value="submit"><br><br>
+    </form><br>
+    </div>
+</body>
+</html>

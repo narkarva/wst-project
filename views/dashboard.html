@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        div.gift {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 300px;
+        }
+        div.gift:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gift img {
+            width: 100%;
+            height: 300px;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        h1
+        {
+            font-family: cursive;
+            text-align: center;
+            color: white;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Page</h1>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Customer Dashboard</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <!--<li><a href="/mycartdisplay"></a></li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Logout </a></li>
+            </ul>
+        </div>
+    </nav>
+    <form action="/addtocart" method="POST">
+    <div class="gift">
+        <a target="_blank" href="/img/chocolate_box.jpg">
+          <img src="/img/chocolate_box.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Delightful chocolate box</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="1">item1</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/glass_vase.jpg">
+          <img src="/img/glass_vase.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Beautiful, simple glass vase show piece</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="2">item2</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/key_chain.jpg">
+          <img src="/img/key_chain.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Blaze key chain, simple and attractive!</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="3">item3</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/mug.jpg">
+          <img src="/img/mug.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Coffee mug with attractive prints on it!</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="4">item4</button>
+        </div>
+    </div> 
+    <div class="gift">
+        <a target="_blank" href="/img/pendant.jpg">
+          <img src="/img/pendant.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Pendant set with embellishments</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="5">item5</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/perfume.jpg">
+          <img src="/img/perfume.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Nautica 100ml perfume</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="6">item6</button>
+        </div>
+    </div> 
+    <div class="gift">
+        <a target="_blank" href="/img/photo_album.jpg">
+          <img src="/img/photo_album.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Function photo album</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="7">item7</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/photo_frames.jpg">
+          <img src="/img/photo_frames.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Photo frame for group photos</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="8">item8</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/rubik_s_cube.jpg">
+          <img src="/img/rubik_s_cube.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Strategic Rubix cube</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="9">item9</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/statue.jpg">
+          <img src="/img/statue.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Awesome decorative show piece</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="10">item10</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/sunglasses.png">
+          <img src="/img/sunglasses.png" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Cool sunglasses</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="11">item11</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/table_clock.jpg">
+          <img src="/img/table_clock.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Daily purpose antique table clock</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="12">item12</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/teddy_bear.jpg">
+          <img src="/img/teddy_bear.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Pretty teady stuff toy</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="13">item13</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/wallet.jpg">
+          <img src="/img/wallet.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Black Men's wallet</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="14">item14</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/wall_hanging.jpg">
+          <img src="/img/wall_hanging.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Wall hanging</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="15">item15</button>
+        </div>
+    </div>
+    <div class="gift">
+        <a target="_blank" href="/img/watch.jpg">
+          <img src="/img/watch.jpg" width="600" height="400">
+        </a>
+        <div class="desc" style="font-size: 15px;"><i>Cool leather watch</i><br>
+            <button type="submit" class="btn btn-primary btn-lg" name="select_gift" value="16">item16</button>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

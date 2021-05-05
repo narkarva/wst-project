@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Receipt Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body
+        {
+            text-align: center;
+        }
+        table, tr, td
+        {
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 30px;
+        }
+        h1
+        {
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 40px;">Receipt</h1>
+    <p style="font-size: 20px;">This is your final payment Receipt</p>
+    <table>
+        <tr>
+            <td><b>Customer ID</b></td>
+            <td><%= cont[count-1].c_id %></td>
+        </tr>
+        <tr>
+            <td><b>Gift ID</b></td>
+            <td><%= cont[count-1].gift_id %></td>
+        </tr>
+        <tr>
+            <td><b>Item Name</b></td>
+            <td><%= cont[count-1].item_name %></td>
+        </tr>
+        <tr>
+            <td><b>Price</b></td>
+            <td><%= cont[count-1].price %></td>
+        </tr>
+        <tr>
+            <td><b>Mode of Payment</b></td>
+            <td><%= mymode %></td>
+        </tr>
+        <tr>
+            <td><b>Card Number</b></td>
+            <td><%= cardnum %></td>
+        </tr>
+        <tr>
+            <td><b>UPI Number</b></td>
+            <td><%= num %></td>
+        </tr>
+    </table><br><br>
+    <button  class="btn btn-primary" onclick="window.print()">Download</button><br><br>
+    <form action="/endrec" method="POST">
+        <input class="btn btn-primary" type="submit" name="submit" value="submit"><br>
+    </form>
+</body>
+</html>
